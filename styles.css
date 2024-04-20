@@ -156,6 +156,45 @@ line-height: 150px;
 .btn:hover {
     background-color: #8cbbd6;
 }
+
+/*-------------------SPA----------------*/
+h3{
+    color: gray;
+}
+#masajes{
+    display:flex;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content:space-evenly;
+}
+#masajes .card{
+    height: 400px;
+}
+#masajes .card img{ 
+    height: 175px;
+}
+#tratamientos-faciales{
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+#tratamientos-faciales .card{
+    height: 400px; 
+}
+#tratamientos-faciales .card img{ 
+    height: 175px; 
+}
+#tratamientos-corporales{
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+#tratamientos-corporales .card{
+    height: 400px;
+}
+#tratamientos-corporales .card img{
+    height: 175px;
+}
 /*-------------------FOOTER----------------*/
 footer {
     background-color: #f2f2f2;

@@ -374,93 +374,85 @@ line-height: 150px;
 /*-------------------CONTACTO------------------*/
 
 .contacto{
-    display: block;
+    display: flex;
     margin: 0 auto;
     text-align: center;
-}
-
-.mapa{
-    margin: 10px auto;
-}
-
-#usuario{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-.datos{
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    padding-bottom: 15px;
-
-}
-
-.datos:nth-child(2n){
-    justify-content: end;
-}
-
-
-
-.formulario{
-    display: block;
-    width:800px;
-    margin: 20px auto;
-    padding: 10px;
+    border-color: #000000;
+    width: 95%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: beige; 
 }
 
-.datos label{
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    justify-content: center; 
+    width: 90%;
+    margin: 20px auto;
+    padding-left: 0px;
+ 
+}
+
+
+
+#form {
+    width: 70%; 
+}
+
+
+.formulario h1,
+.formulario p,
+.formulario form{
+    width: 100%; 
+    text-align: center; 
     margin-bottom: 10px;
-    width: 95%;
-    margin: 5px 0;
-   }
-
-.datos input {
-    height: 30px;
-    width: 95%;
-    padding: 0 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    outline: none;
+    font-family: "Spectral", serif;
+    
 }
 
-.mensaje {
-    text-align: center; /* Centrar el contenido del div */
+
+.formulario .datos label {
+    margin-bottom: 5px; 
+    width: 100%; 
+    
 }
 
-.mensaje label {
-    width: 95%;
-    margin: 5px auto; /* Margen superior e inferior de 5px y centrar horizontalmente */
-}
-
-.mensaje textarea {
-    width: 95%;
-    padding: 5px; /* Ajustar el padding para que sea uniforme */
-}
-
-.boton {
-    text-align: center; /* Centrar el botón */
-}
-
+.formulario .datos input,
+.formulario .mensaje textarea,
 .boton button {
-    width: 95%;
-    margin: 10px auto; /* Margen superior e inferior de 10px y centrar horizontalmente */
+    width: 95%; 
+    margin-bottom: 10px; 
+    box-shadow: 1px 1px 1px #8cbbd6;
+    font-size: 17px;
+
 }
 
-button {
-    padding: 10px 20px;
-    background-color: beige;
-    color: #353131;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.formulario .mensaje textarea{
+    padding-left: 10px;
+
+}
+.boton button {
+  background-color:  #8cbbd6;
 }
 
+.hotelcontacto{
+    margin: 20px auto;
+    padding: 20px 20px;
+    font-family: "Spectral", serif;
+
+}
+
+.hotelcontacto h2{
+    font-size: 25px;
+}
+
+.hotelcontacto p{
+    font-size: 17px;
+}
 
 @media (max-width: 768px) {
     .booking-nav ul {

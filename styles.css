@@ -253,6 +253,304 @@ line-height: 150px;
     height: auto;
 }
 
+/*-------------------HABITACIONES------------------*/
+.habitacion1{
+    display: flex;
+    margin: 25px auto;
+    justify-content:right;
+    width: 90%;
+    border-style:groove;
+    border-width:thin;
+    border-radius: 10px;  
+    background-color: beige;  
+
+}
+
+.detallehabitacion h2{
+    font-family: "Spectral", serif;
+}
+
+.habitaciontexto{
+    font-family: "Spectral", serif;
+    font-size: 18px;
+}
+
+.detallehabitacion{
+    width: 90%;
+    padding: 15px; 
+}
+
+
+.icono-texto-container {
+    display: block;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.icono-texto {
+    display: flex;
+    padding-top: 10px;
+   
+}
+
+.texto {
+    font-family: "Spectral", serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.fa-snowflake{
+    padding-right: 14px;
+    padding-left: 4px;
+
+}
+
+.fa-temperature-arrow-up{
+    padding-right: 1px;
+    padding-left: 1px;
+
+}
+
+.fa-martini-glass-empty{
+    padding-right: 3px;
+    padding-left: 3px;
+
+}
+
+.fa-bath{
+    padding-right: 4px;
+    padding-left: 4px;
+
+}
+
+.fa-wifi{
+    padding-right: px;
+    padding-left: 1px;
+}
+
+.fa-lock{
+    padding-right: 5px;
+    padding-left: 3px;
+}
+
+.fa-leaf{
+    padding-right: 5px;
+    padding-left: 3px;
+}
+
+.icono {
+    font-size: 18px;
+    color: #000000; 
+    padding-right: 10px;
+    
+}
+
+.texto {
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+#suite, #deluxe, #standard{
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 10px; 
+
+}
+
+.carousel-slide {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*-------------------CONTACTO------------------*/
+
+.contacto{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mapa{
+    margin: 10px auto;
+}
+
+#usuario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.datos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+
+}
+
+.datos:nth-child(2n){
+    justify-content: end;
+}
+
+
+
+.formulario{
+    display: block;
+    width:800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.datos label{
+    margin-bottom: 10px;
+    width: 95%;
+    margin: 5px 0;
+   }
+
+.datos input {
+    height: 30px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.mensaje {
+    text-align: center; /* Centrar el contenido del div */
+}
+
+.mensaje label {
+    width: 95%;
+    margin: 5px auto; /* Margen superior e inferior de 5px y centrar horizontalmente */
+}
+
+.mensaje textarea {
+    width: 95%;
+    padding: 5px; /* Ajustar el padding para que sea uniforme */
+}
+
+.boton {
+    text-align: center; /* Centrar el botón */
+}
+
+.boton button {
+    width: 95%;
+    margin: 10px auto; /* Margen superior e inferior de 10px y centrar horizontalmente */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: beige;
+    color: #353131;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .booking-nav ul {
+        list-style: none;
+        display: block;
+        justify-content: center;
+        align-items: center;
+           }
+
+    .booking-nav{
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .booking-nav li{
+        padding: 0px;
+        margin: 10px;
+    }
+
+    .main-nav {
+        font-size: 12px;
+        margin: 10px;
+        background-color: #f2f2f2 ;
+        color: #fff;
+        border-radius: 5px;
+    }
+    
+    .main-nav ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+    .main-nav li{
+        margin: 15px 0px
+    }
+    
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mapa {
+        margin-bottom: 20px; 
+    }
+
+    .formulario {
+        width: 80%; 
+    }
+
+}
+
+@media (max-width: 576px) { 
+    .main-nav {
+        font-size: 12px;
+        margin: 10px;
+        background-color: #f2f2f2 ;
+        color: #fff;
+        border-radius: 5px;
+        justify-items: center;
+   
+
+    }
+    .habitacion1{
+        display: block;
+
+    }
+    
+    .main-nav ul{
+        list-style-type: none;
+        margin: 0px auto;
+        padding: 5px;
+        display: block;
+        justify-content: space-around;
+        justify-items: center;
+    }
+
+    
+           
+    }
+    
+
+ 
+
         
 /*-------------------FOOTER----------------*/
 footer {

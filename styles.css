@@ -26,8 +26,8 @@ header h1{
 /*-------------------NAV--------------------*/
 .main-nav {
     font-size: 18px;
-    margin: 10px;
-    background-color: #f2f2f2 ;
+    margin: 8px;
+    background-color: rgb(182, 218, 218) ;
     color: #fff;
     border-radius: 5px;
 }
@@ -66,12 +66,26 @@ header h1{
 .booking-nav h3{
     font-size: 15px;
     font-weight: 400;
+    color: black;
 }
 #fecha-llegada,
 #fecha-salida,
 #tipo-habitacion {
-  color:grey;
+  color:black;
   border: 8px solid #c0e8e1;
+}
+.btn-nav{
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #007bff ;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-nav:hover{
+    background-color: #0056b3;
 }
 
 /*-------------------MAIN------------------*/
@@ -92,12 +106,16 @@ main{
     margin: 20px 70px;
     text-align: justify;
 }
+.fa-solid,
+.fa-brands{
+    color: grey;
+    padding:5px
+}
 .caja-foto{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     width: 80%;
-    margin: 0 auto; 
-    padding: 20px;
+    margin: auto;
 }
 .caja-galery{
 width: 150px;
@@ -123,11 +141,12 @@ line-height: 150px;
 .image-overlay img {
     width: 120%;
     vertical-align: top;
+    opacity: 0.8;
 }
 
 .content {
     position: absolute;
-    top: 60%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -137,14 +156,14 @@ line-height: 150px;
 }
 
 .content h2 {
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 300;
 }
 
 .btn {
-    height: 50px;
+    height: 45px;
     display: inline-block;
-    padding: 18px;
+    padding: 10px;
     background-color: grey;
     color: #fff;
     text-decoration: none;
@@ -158,8 +177,11 @@ line-height: 150px;
 }
 
 /*-------------------SPA----------------*/
-h3{
+.h3-spa{
     color: gray;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px
 }
 #masajes{
     display:flex;
@@ -195,16 +217,54 @@ h3{
 #tratamientos-corporales .card img{
     height: 175px;
 }
+.btn-final{
+    display: block;
+    text-align: center;
+    padding: 50px;
+    color: grey;
+}
+
+/*-------------------GASTRONOMIA------------*/
+
+
+.h-gastronomia {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+.h1-gastronomia {
+
+    color: #333;
+}
+.menu-gastronomia {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.menu-item-gastronomia {
+    flex-basis: 30%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.img-gastronomia {
+    max-width: 40%;
+    height: auto;
+}
+
+        
 /*-------------------FOOTER----------------*/
 footer {
     background-color: #f2f2f2;
-    padding: 20px 0;
-    font-size: 15px;
+    padding: 15px 0;
+    font-size: 12px;
     font-weight: 300;
-    margin: 10px
+    margin: 5px
 }
 footer h3{
-    color: grey
+    color: grey;
+    font-size: 12px
 }
 .footer-content {
     max-width: 1200px;
@@ -218,7 +278,7 @@ footer h3{
 .contact-info,
 .newsletter {
     flex-basis: calc(33.33% - 20px);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .social-media h3,
@@ -266,5 +326,5 @@ footer h3{
 
 .copyright {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }

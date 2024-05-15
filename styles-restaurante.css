@@ -1,0 +1,180 @@
+*{
+    font-family:"Roboto", sans-serif;
+    text-align: center;
+    
+}
+
+.logo{
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly
+}
+
+header h1{
+    font-size: 25px;
+    color: grey;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.logo img {
+    width: 20%; 
+    height: 15%;
+    margin: 20px
+}
+
+/*-------------------NAV--------------------*/
+.main-nav {
+    font-size: 18px;
+    margin: 8px;
+    background-color: rgb(182, 218, 218) ;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.main-nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+.booking-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-nav li{
+    margin: 15px 0px
+}
+.booking-nav li{
+    padding: 25px;
+    margin: 10px
+}
+.main-nav a,
+.booking-nav li {
+    text-decoration: none;
+    color: grey;
+}
+
+.booking-nav input,
+.booking-nav select {
+    padding: 5px;
+}
+.booking-nav h3{
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+#fecha-llegada,
+#fecha-salida,
+#tipo-habitacion {
+  color:black;
+  border: 8px solid #c0e8e1;
+}
+/*---gastronomia---*/
+
+.btn-formulario{
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #007bff ;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-nav:hover{
+    background-color: #0056b3;
+}
+
+
+/*Responsive*/
+.seccion_restaurantes img{
+    width: 100%;
+    height: auto;  
+    border-radius: 5px; 
+   }
+
+.seccion_restaurantes{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+        );
+    gap: 16px;
+    grid-template-rows: 1fr;
+}
+
+@media (width < 940px){
+    .seccion_restaurantes{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (width > 1240px){
+    .seccion_restaurantes{
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(400px, 1fr)
+        );
+    } 
+}
+
+     
+.landing {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    min-height: 100vh;
+}
+
+/*estilos*/
+
+.seccion_restaurantes_caja{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px;
+    grid-auto-rows: 150px;
+    background-color: #d0eee8;
+    border-radius: 5px;
+    align-items: center;
+}
+.seccion_restaurantes_caja h3{
+    margin: 15px;
+    font-style:italic;
+    font-size: 25px;
+    color: rgb(65, 65, 66);
+}
+.seccion_restaurantes_caja p {
+    margin: 10px;
+    color: rgb(114, 113, 113);
+    font-family: "spectral", serif;
+    font-size: larger;
+}
+.formulario fieldset{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    border: 3px #c0e8e1 solid;
+    border-radius: 5px;
+    margin-top: 16PX;
+}
+
+@media(width<1000px){
+    .formulario fieldset{
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr ;
+    }
+}
+
+.formulario input, .formulario select{
+   margin: 5px;
+   height: 35px;
+  /* width: 200px;*/
+   border-radius: 5px;
+   border: none;
+   outline: grey ;
+}
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles-restaurante.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <title>Gatronomia Arenas Blancas</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Arenas Blancas</h1>
+            <img src="logo.png" alt="Logo del hotel y spa">
+            <h1>Hotel & Spa</h1>
+        </div>
+    </header>
+    <div class="main-nav">
+        <nav>
+            <ul>
+                <li><a href="spa.html">Spa</a></li>
+                <li><a href="#">Habitaciones</a></li>
+                <li><a href="restaurantes.html">Gastronomía</a></li>
+                <li><a href="#">Actividades</a></li>
+                <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Inicio de Sesión</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="seccion_restaurantes">
+            <aside class="restaurante"><!--Reflejos del plata-->
+                <div class="seccion_restaurantes_imagen">
+                    <img src="restaurante_mariscos.jpg" alt="aqui habria una imagen del restaurante Reflejos del Plata">
+                </div>
+                <div class="seccion_restaurantes_caja">
+                    <h3>
+                        "Reflejos del Plata" Restaurant
+                    </h3>
+                    <p>
+                        Restaurante con vista al rio, con una atmósfera más íntima y romántica, ofrece platos
+                        con énfasis en pescados y mariscos.
+                    </p>
+                </div>
+            </aside>
+            <aside class="restaurante"><!--sabores de la pampa-->
+                <div class="seccion_restaurantes_imagen">
+                    <img src="restaurant_la_pampa.jpg" alt="aqui habria una imagen del restaurante Sabores de la pampa">
+                </div>
+                <div class="seccion_restaurantes_caja">
+                    <div>
+                        <h3>
+                            "Sabores de la Pampa" Restaurant
+                        </h3>
+                    </div>
+                    <div>
+                        <p>
+                            Ubicado en la planta baja del hotel, ofrece una experiencia culinaria única que combina la
+                            rica tradición argentina con toques contemporáneos.
+                        </p>
+                    </div>
+
+                </div>
+            </aside>
+            <aside class="restaurante"><!--bar el mirador-->
+                <div class="seccion_restaurantes_imagen">
+                    <img src="Desayuno_mirador.jpg" alt="aqui habria una imagen del Bar el Mirador">
+                </div>
+                <div class="seccion_restaurantes_caja">
+                    <div>
+                        <h3>
+                            Café - Bar "El Mirador Arenas"
+                        </h3>
+                    </div>
+                    <div>
+                        <p>
+                            En la azotea, con vistas impresionantes de la ciudad.
+                            Ofrece una amplia selección tanto de cafes de especialidad como de cócteles y cervezas
+                            artesanales.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <section class="formulario">
+            <div>
+                <form action="/">
+                    <fieldset>
+                        <legend> Reservá con nosotros </legend>
+                        <div> <input type="text" name="name" placeholder="Escriba aquí su nombre"></div>
+                        <div> <input type="email" name="email" placeholder="ejemplo@email.com"></div>
+                        <div> <select name="local" placeholder="seleccione el local de la reserva">
+                                <option disabled selected>Elige el local </option>
+                                <option>Bar "El Mirador" </option>
+                                <option>Reflejos del Plata Restaurant</option>
+                                <option>Sabores de la Pampa Restaurant</option>
+                            </select></div>
+                        <div> <input type="text" name="date" placeholder="Fecha de reserva"
+                                onfocus="(this.type='date')"></div>
+                        <div><button class="btn-formulario">
+                                Reservá
+                            </button></div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h3>Síguenos en nuestras redes sociales:</h3>
+                <ul>
+                    <li><a href="#">Instagram: @hotel_spa</a></li>
+                    <li><a href="#">Facebook: /hotel_spa</a></li>
+                    <li><a href="#">Twitter: @hotel_spa</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contacto:</h3>
+                <p>Correo Electrónico: <a href="mailto:info@hotel-spa.com">info@hotel-spa.com</a></p>
+                <p>Teléfono: +54 9 123456789</p>
+                <p>Dirección: Calle Arenas 123, Costa Blanca, Argentina</p>
+            </div>
+            <div class="newsletter">
+                <h3>Suscríbete a nuestro newsletter:</h3>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Hotel Spa Arenas Blancas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

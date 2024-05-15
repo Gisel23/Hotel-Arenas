@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Spectral", serif;
     font-style: normal;
 }
 /*---------------HEADER--------------*/
@@ -13,7 +13,7 @@ body {
 header h1{
     font-size: 25px;
     color: grey;
-    font-family: "Roboto", sans-serif;
+    font-family: "Spectral", serif;
     font-weight: 300;
 }
 
@@ -246,7 +246,7 @@ line-height: 150px;
     margin: 10px;
     padding: 20px;
     border: 1px solid #ccc;
-    text-align: center;
+    text-align: justify;
 }
 .img-gastronomia {
     max-width: 40%;

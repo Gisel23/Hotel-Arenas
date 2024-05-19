@@ -90,6 +90,12 @@ header h1{
 
 /*-------------------MAIN------------------*/
 
+.img-frente{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 70%;
+}
 main{
     margin: 20px
 }
@@ -161,7 +167,7 @@ line-height: 150px;
 }
 
 .btn {
-    height: 45px;
+    height: 54px;
     display: inline-block;
     padding: 10px;
     background-color: grey;
@@ -181,7 +187,9 @@ line-height: 150px;
     color: gray;
     font-size: 25px;
     text-align: center;
-    padding: 10px
+    padding: 10px;
+    animation: bounce; 
+    animation-duration: 2s; 
 }
 #masajes{
     display:flex;
@@ -223,7 +231,12 @@ line-height: 150px;
     padding: 50px;
     color: grey;
 }
-
+/*-------------------ACTIVIDADES------------*/
+.fa-bell{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
 /*-------------------GASTRONOMIA------------*/
 
 
@@ -235,6 +248,8 @@ line-height: 150px;
 .h1-gastronomia {
 
     color: #333;
+    animation: bounce; 
+    animation-duration: 2s; /
 }
 .menu-gastronomia {
     display: flex;
@@ -371,6 +386,7 @@ line-height: 150px;
     object-fit: cover;
 }
 
+
 /*-------------------CONTACTO------------------*/
 
 .contacto{
@@ -453,97 +469,6 @@ line-height: 150px;
 .hotelcontacto p{
     font-size: 17px;
 }
-
-@media (max-width: 768px) {
-    .booking-nav ul {
-        list-style: none;
-        display: block;
-        justify-content: center;
-        align-items: center;
-           }
-
-    .booking-nav{
-        margin: 0 auto;
-        align-items: center;
-        text-align: center;
-    }
-
-    .booking-nav li{
-        padding: 0px;
-        margin: 10px;
-    }
-
-    .main-nav {
-        font-size: 12px;
-        margin: 10px;
-        background-color: #f2f2f2 ;
-        color: #fff;
-        border-radius: 5px;
-    }
-    
-    .main-nav ul{
-        list-style-type: none;
-        margin: 0px;
-        padding: 5px;
-        display: flex;
-        justify-content: space-around;
-        text-align: center;
-    }
-    
-    .main-nav li{
-        margin: 15px 0px
-    }
-    
-    .contacto {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .mapa {
-        margin-bottom: 20px; 
-    }
-
-    .formulario {
-        width: 80%; 
-    }
-
-}
-
-@media (max-width: 576px) { 
-    .main-nav {
-        font-size: 12px;
-        margin: 10px;
-        background-color: #f2f2f2 ;
-        color: #fff;
-        border-radius: 5px;
-        justify-items: center;
-   
-
-    }
-    .habitacion1{
-        display: block;
-
-    }
-    
-    .main-nav ul{
-        list-style-type: none;
-        margin: 0px auto;
-        padding: 5px;
-        display: block;
-        justify-content: space-around;
-        justify-items: center;
-    }
-
-    
-           
-    }
-    
-
- 
-
-        
 /*-------------------FOOTER----------------*/
 footer {
     background-color: #f2f2f2;
@@ -618,3 +543,137 @@ footer h3{
     text-align: center;
     margin-top: 15px;
 }
+/*-----------------------MEDIA QUERIES----------------*/
+@media (max-width: 768px) {
+    .booking-nav ul {
+        list-style: none;
+        display: block;
+        justify-content: center;
+        align-items: center;
+           }
+
+    .booking-nav{
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .booking-nav li{
+        padding: 0px;
+        margin: 10px;
+    }
+
+    .main-nav {
+        font-size: 12px;
+        margin: 10px;
+        background-color: #f2f2f2 ;
+        color: #fff;
+        border-radius: 5px;
+    }
+    
+    .main-nav ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+    .main-nav li{
+        margin: 15px 0px
+    }
+    
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mapa {
+        margin-bottom: 20px; 
+    }
+
+    .formulario {
+        width: 80%; 
+    }
+    .caja-foto {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .footer-content{
+        margin: 20px;
+        justify-content: space-around;
+        padding:10px;
+    }
+    .newsletter{
+        flex-basis: calc(100.33% - 20px);
+       }        
+    
+}
+
+@media (max-width: 576px) { 
+    .main-nav {
+        font-size: 12px;
+        margin: 10px;
+        background-color: #f2f2f2 ;
+        color: #fff;
+        border-radius: 5px;
+        justify-items: center;
+   
+
+    }
+    .habitacion1{
+        display: block;
+
+    }
+    
+    .main-nav ul{
+        list-style-type: none;
+        margin: 0px auto;
+        padding: 5px;
+        display: block;
+        justify-content: space-around;
+        justify-items: center;
+       
+    }
+   .booking-nav{
+    font-size: 12px;
+   }
+
+/*index media.queries*/
+header h1{
+    font-size: 20px;
+}
+.img-frente{
+width: 100%;
+}    
+.caja-foto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.footer-content{
+    margin: 20px;
+    justify-content: space-around;
+    
+}
+.newsletter{
+    flex-basis: calc(100.33% - 20px);
+   }        
+   /*--------actividades-------*/
+   .menu-gastronomia {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.h3-spa{
+    font-size: 19px;
+}
+    }
+    
+
+ 
+
+        

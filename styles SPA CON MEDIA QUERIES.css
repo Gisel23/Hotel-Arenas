@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+/*---------------HEADER--------------*/
+.logo{
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly
+}
+
+header h1{
+    font-size: 25px;
+    color: grey;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.logo img {
+    width: 20%; 
+    height: 15%;
+    margin: 20px
+}
+
+/*-------------------NAV--------------------*/
+.main-nav {
+    font-size: 18px;
+    margin: 10px;
+    background-color: #f2f2f2 ;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.main-nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+.booking-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-nav li{
+    margin: 15px 0px
+}
+.booking-nav li{
+    padding: 25px;
+    margin: 10px
+}
+.main-nav a,
+.booking-nav li {
+    text-decoration: none;
+    color: grey;
+}
+
+.booking-nav input,
+.booking-nav select {
+    padding: 5px;
+}
+.booking-nav h3{
+    font-size: 15px;
+    font-weight: 400;
+}
+#fecha-llegada,
+#fecha-salida,
+#tipo-habitacion {
+  color:grey;
+  border: 8px solid #c0e8e1;
+}
+
+/*-------------------MAIN------------------*/
+
+main{
+    margin: 20px
+}
+.fotos-main{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.fotos-1{
+    height: 40%;
+}
+
+.main-p{
+    font-weight: 300;
+    margin: 20px 70px;
+    text-align: justify;
+}
+.caja-foto{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 80%;
+    margin: 0 auto; 
+    padding: 20px;
+}
+.caja-galery{
+width: 150px;
+height: 200px;
+margin: 15px;
+text-align: center;
+line-height: 150px;
+}
+
+
+
+.habitaciones-box {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: relative;
+}
+
+.image-overlay img {
+    width: 120%;
+    vertical-align: top;
+}
+
+.content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    border: double;
+    padding: 10px
+}
+
+.content h2 {
+    font-size: 27px;
+    font-weight: 300;
+}
+
+.btn {
+    height: 50px;
+    display: inline-block;
+    padding: 18px;
+    background-color: grey;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 200;
+}
+
+.btn:hover {
+    background-color: #8cbbd6;
+}
+
+/*-------------------SPA----------------*/ 
+h3{
+    color: gray;
+}
+#masajes{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-evenly;
+}
+#masajes .card{
+    height: 400px;
+}
+#masajes .card img{ 
+    height: 175px;
+}
+
+#tratamientos-faciales{
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+#tratamientos-faciales .card{
+    height: 400px; 
+}
+#tratamientos-faciales .card img{ 
+    height: 175px; 
+}
+
+#tratamientos-corporales{
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+#tratamientos-corporales .card{
+    height: 400px;
+}
+#tratamientos-corporales .card img{
+    height: 175px;
+}
+
+/* CELULAR*/
+@media (max-width: 768px){
+    section div .card {
+        display: block;
+        flex-wrap: wrap; 
+        width: 100%;
+    }
+}  
+
+/* TABLETS */
+@media (min-width: 768px) {
+    section div .card{
+       width: 100%;
+       margin: 10px;
+    }
+ }
+
+ /* COMPUTADORAS EN ADELANTE */
+  @media (min-width: 1200px) {
+    section div .card {
+       width: 25%;
+    }
+ }   
+
+/*-------------------FOOTER----------------*/
+footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 10px
+}
+footer h3{
+    color: grey
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.social-media,
+.contact-info,
+.newsletter {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.social-media h3,
+.contact-info h3,
+.newsletter h3 {
+    margin-top: 0;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media ul li,
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+.newsletter form {
+    display: flex;
+}
+
+.newsletter input[type="email"],
+.newsletter button {
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+.newsletter input[type="email"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #0056b3;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}

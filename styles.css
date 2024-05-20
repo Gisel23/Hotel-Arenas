@@ -438,7 +438,7 @@ line-height: 150px;
 }
 
 .formulario .datos input,
-.formulario .mensaje textarea,
+.formulario .datos textarea,
 .boton button {
     width: 95%; 
     margin-bottom: 10px; 
@@ -447,7 +447,7 @@ line-height: 150px;
 
 }
 
-.formulario .mensaje textarea{
+.formulario .datos textarea{
     padding-left: 10px;
 
 }
@@ -469,6 +469,15 @@ line-height: 150px;
 .hotelcontacto p{
     font-size: 17px;
 }
+
+.datos small{
+    color: rgba(248, 2, 2, 0.877);
+    display: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
 /*-------------------FOOTER----------------*/
 footer {
     background-color: #f2f2f2;

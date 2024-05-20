@@ -231,6 +231,31 @@ line-height: 150px;
     padding: 50px;
     color: grey;
 }
+/* CELULAR*/
+@media (max-width: 768px){
+    section div .card {
+        display: block;
+        flex-wrap: wrap; 
+        width: 100%;
+        margin: 10px;
+    }
+}  
+
+/* TABLETS */
+@media (min-width: 768px) {
+    section div .card{
+       width: 100%;
+       margin: 10px;
+    }
+ }
+
+ /* COMPUTADORAS EN ADELANTE */
+  @media (min-width: 1200px) {
+    section div .card {
+       width: 25%;
+    }
+ }   
+
 /*-------------------ACTIVIDADES------------*/
 .fa-bell{
     display: flex;

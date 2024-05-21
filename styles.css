@@ -707,7 +707,110 @@ width: 100%;
 }
     }
     
-
+/*---restaurante---*/
  
+.btn-formulario{
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #007bff ;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-nav:hover{
+    background-color: #0056b3;
+}
+
+
+/*Responsive*/
+.seccion_restaurantes img{
+    width: 100%;
+    height: auto;  
+    border-radius: 5px; 
+   }
+
+.seccion_restaurantes{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+        );
+    gap: 16px;
+    grid-template-rows: 1fr;
+}
+
+@media (width < 980px){
+    .seccion_restaurantes{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (width > 1240px){
+    .seccion_restaurantes{
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(400px, 1fr)
+        );
+    } 
+}
+
+@media (width < 425px){
+    .seccion_restaurantes{
+        grid-template-rows: max-content;
+    }
+}
+     
+
+
+.seccion_restaurantes_caja{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px;
+    grid-auto-rows: 150px;
+    background-color:beige;
+    border-radius: 5px;
+    align-items: center;
+}
+.seccion_restaurantes_caja h3{
+    margin: 0px 20px;
+    font-style:bold;
+    font-size: 25px;
+    color: rgb(65, 65, 66);
+    text-align: center;
+}
+.seccion_restaurantes_caja p {
+    margin: 0px 20px;
+    color: rgb(114, 113, 113);
+
+}
+.formulario fieldset{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    border: 3px #c0e8e1 solid;
+    border-radius: 5px;
+    margin-top: 16PX;
+}
+
+
+.formulario input, .formulario select{
+    
+    margin: 5px;
+    height: 40px;
+    
+    border-radius: 5px;
+    border: none;
+    outline: grey ;
+}
+
+@media(width<1000px){
+    .formulario fieldset{
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr ;
+    }
+}
+
 
         

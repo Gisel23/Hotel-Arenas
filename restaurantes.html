@@ -4,32 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles-restaurante.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-    <title>Gatronomia Arenas Blancas</title>
+    <script src="https://kit.fontawesome.com/a7f4aae58a.js" crossorigin="anonymous"></script>
+    <title>Restaurante Arenas Blancas</title>
 </head>
 
 <body>
     <header>
         <div class="logo">
             <h1>Arenas Blancas</h1>
-            <img src="logo.png" alt="Logo del hotel y spa">
+            <img src="img/logo.png" alt="Logo del hotel y spa">
             <h1>Hotel & Spa</h1>
         </div>
     </header>
     <div class="main-nav">
         <nav>
             <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
                 <li><a href="spa.html">Spa</a></li>
-                <li><a href="#">Habitaciones</a></li>
-                <li><a href="restaurantes.html">Gastronomía</a></li>
-                <li><a href="#">Actividades</a></li>
-                <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Inicio de Sesión</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="contacto.html"><i class="fa-solid fa-right-to-bracket"></i>Contacto</a></li>
             </ul>
         </nav>
     </div>
@@ -37,7 +35,8 @@
         <section class="seccion_restaurantes">
             <aside class="restaurante"><!--Reflejos del plata-->
                 <div class="seccion_restaurantes_imagen">
-                    <img src="restaurante_mariscos.jpg" alt="aqui habria una imagen del restaurante Reflejos del Plata">
+                    <img src="img/restaurante_mariscos.jpg"
+                        alt="aqui habria una imagen del restaurante Reflejos del Plata">
                 </div>
                 <div class="seccion_restaurantes_caja">
                     <h3>
@@ -51,7 +50,8 @@
             </aside>
             <aside class="restaurante"><!--sabores de la pampa-->
                 <div class="seccion_restaurantes_imagen">
-                    <img src="restaurant_la_pampa.jpg" alt="aqui habria una imagen del restaurante Sabores de la pampa">
+                    <img src="img/restaurant_la_pampa.jpg"
+                        alt="aqui habria una imagen del restaurante Sabores de la pampa">
                 </div>
                 <div class="seccion_restaurantes_caja">
                     <div>
@@ -70,7 +70,7 @@
             </aside>
             <aside class="restaurante"><!--bar el mirador-->
                 <div class="seccion_restaurantes_imagen">
-                    <img src="Desayuno_mirador.jpg" alt="aqui habria una imagen del Bar el Mirador">
+                    <img src="img/Desayuno_mirador.jpg" alt="aqui habria una imagen del Bar el Mirador">
                 </div>
                 <div class="seccion_restaurantes_caja">
                     <div>
@@ -90,20 +90,21 @@
         </section>
         <section class="formulario">
             <div>
-                <form action="/">
+                <form action="https://formspree.io/f/mvoenkko" method="post">
                     <fieldset>
                         <legend> Reservá con nosotros </legend>
-                        <div> <input type="text" name="name" placeholder="Escriba aquí su nombre"></div>
-                        <div> <input type="email" name="email" placeholder="ejemplo@email.com"></div>
-                        <div> <select name="local" placeholder="seleccione el local de la reserva">
+                        <div> <input required id="name" name="name" placeholder="Escriba aquí su nombre"></div>
+                        <div> <input required id="email" type="email" name="email" placeholder="ejemplo@email.com">
+                        </div>
+                        <div> <select required id="Local" name="local" placeholder="seleccione el local de la reserva">
                                 <option disabled selected>Elige el local </option>
                                 <option>Bar "El Mirador" </option>
                                 <option>Reflejos del Plata Restaurant</option>
                                 <option>Sabores de la Pampa Restaurant</option>
                             </select></div>
-                        <div> <input type="text" name="date" placeholder="Fecha de reserva"
+                        <div> <input required id="fecha_reserva" type="text" name="date" placeholder="Fecha de reserva"
                                 onfocus="(this.type='date')"></div>
-                        <div><button class="btn-formulario">
+                        <div><button type="submit" class="btn-formulario">
                                 Reservá
                             </button></div>
                     </fieldset>

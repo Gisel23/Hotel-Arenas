@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/a7f4aae58a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Restaurante Arenas Blancas</title>
 </head>
 
@@ -20,17 +22,41 @@
             <h1>Hotel & Spa</h1>
         </div>
     </header>
-    <div class="main-nav">
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
-                <li><a href="spa.html">Spa</a></li>
-                <li><a href="habitaciones.html">Habitaciones</a></li>
-                <li><a href="actividades.html">Actividades</a></li>
-                <li><a href="contacto.html"><i class="fa-solid fa-right-to-bracket"></i>Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="spa.html">Spa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="habitaciones.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Habitaciones</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="habitaciones.html#standar">Habitación Estándar</a></li>
+                            <li><a class="dropdown-item" href="habitaciones.html#deluxe">Habitación Deluxe</a></li>
+                            <li><a class="dropdown-item" href="habitaciones.html#suite">Suite</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="restaurantes.html">Restaurant</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="actividades.html">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main>
         <section class="seccion_restaurantes">
             <aside class="restaurante"><!--Reflejos del plata-->
@@ -140,6 +166,8 @@
             <p>© 2024 Hotel Spa Arenas Blancas. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/bac8b8bb9d.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

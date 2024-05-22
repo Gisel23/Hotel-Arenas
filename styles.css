@@ -24,21 +24,42 @@ header h1{
 }
 
 /*-------------------NAV--------------------*/
-.main-nav {
+.navbar {
     font-size: 18px;
-    margin: 8px;
     background-color: rgb(182, 218, 218) ;
-    color: #fff;
-    border-radius: 5px;
+   
 }
 
-.main-nav ul{
-    list-style-type: none;
-    margin: 0px;
-    padding: 5px;
-    display: flex;
-    justify-content: space-around;
-    justify-items: center;
+.nav-item{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+.nav-link{
+    font-size: 20px;
+    color: #333;
+    text-decoration: none
+}
+
+.nav-link:hover{
+    color: #f2f2f2;
+}
+
+.dropdown-menu{
+    background-color: rgb(182, 218, 218) ;
+    border: none;
+}
+
+.navbar-toggler {
+    border: none; 
+
+}
+
+.navbar-toggler:hover {
+    background-color: #f2f2f2; 
+
 }
 .booking-nav ul {
     list-style: none;
@@ -83,6 +104,7 @@ header h1{
     background-color: #007bff ;
     color: #fff;
     cursor: pointer;
+    
 }
 .btn-nav:hover{
     background-color: #0056b3;
@@ -183,6 +205,7 @@ line-height: 150px;
 }
 
 /*-------------------SPA----------------*/
+
 .h3-spa{
     color: gray;
     font-size: 25px;
@@ -191,9 +214,10 @@ line-height: 150px;
     animation: bounce; 
     animation-duration: 2s; 
 }
+
 #masajes{
     display:flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items:center;
     justify-content:space-evenly;
 }
@@ -203,10 +227,12 @@ line-height: 150px;
 #masajes .card img{ 
     height: 175px;
 }
+
 #tratamientos-faciales{
     display: flex;
     align-items:center;
     justify-content:space-evenly;
+    flex-wrap: wrap;
 }
 #tratamientos-faciales .card{
     height: 400px; 
@@ -214,10 +240,12 @@ line-height: 150px;
 #tratamientos-faciales .card img{ 
     height: 175px; 
 }
+
 #tratamientos-corporales{
     display: flex;
     align-items:center;
     justify-content:space-evenly;
+    flex-wrap: wrap;
 }
 #tratamientos-corporales .card{
     height: 400px;
@@ -225,36 +253,8 @@ line-height: 150px;
 #tratamientos-corporales .card img{
     height: 175px;
 }
-.btn-final{
-    display: block;
-    text-align: center;
-    padding: 50px;
-    color: grey;
-}
-/* CELULAR*/
-@media (max-width: 768px){
-    section div .card {
-        display: block;
-        flex-wrap: wrap; 
-        width: 100%;
-        margin: 10px;
-    }
-}  
 
-/* TABLETS */
-@media (min-width: 768px) {
-    section div .card{
-       width: 100%;
-       margin: 10px;
-    }
- }
 
- /* COMPUTADORAS EN ADELANTE */
-  @media (min-width: 1200px) {
-    section div .card {
-       width: 25%;
-    }
- }   
 
 /*-------------------ACTIVIDADES------------*/
 .fa-bell{
@@ -322,72 +322,42 @@ line-height: 150px;
 
 
 .icono-texto-container {
-    display: block;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
     gap: 10px;
-    padding-top: 20px;
+    padding-top: 10px;
+    justify-content: left;
 }
+
 
 .icono-texto {
     display: flex;
-    padding-top: 10px;
    
+}
+
+
+.icono {
+    font-size: 17px;
+    color: #000000; 
+    padding-right: 10px;
+  
+}
+
+.fa-snowflake{
+    padding-right: 10px;
+    padding-left: 8px;
+
+}
+
+.fa-lock{
+    padding-right: 10px;
+    padding-left: 8px;
 }
 
 .texto {
     font-family: "Spectral", serif;
     font-weight: bold;
-    font-size: 30px;
-}
-
-.fa-snowflake{
-    padding-right: 14px;
-    padding-left: 4px;
-
-}
-
-.fa-temperature-arrow-up{
-    padding-right: 1px;
-    padding-left: 1px;
-
-}
-
-.fa-martini-glass-empty{
-    padding-right: 3px;
-    padding-left: 3px;
-
-}
-
-.fa-bath{
-    padding-right: 4px;
-    padding-left: 4px;
-
-}
-
-.fa-wifi{
-    padding-right: px;
-    padding-left: 1px;
-}
-
-.fa-lock{
-    padding-right: 5px;
-    padding-left: 3px;
-}
-
-.fa-leaf{
-    padding-right: 5px;
-    padding-left: 3px;
-}
-
-.icono {
-    font-size: 18px;
-    color: #000000; 
-    padding-right: 10px;
-    
-}
-
-.texto {
-    font-size: 12px;
+    font-size: 12px; 
     padding-top: 3px;
 }
 
@@ -395,6 +365,7 @@ line-height: 150px;
     width: 100%;
     overflow: hidden;
     border-top-left-radius: 10px; 
+    min-width: 300px;
 
 }
 
@@ -410,7 +381,6 @@ line-height: 150px;
     height: auto;
     object-fit: cover;
 }
-
 
 /*-------------------CONTACTO------------------*/
 
@@ -442,6 +412,8 @@ line-height: 150px;
 
 #form {
     width: 70%; 
+    
+
 }
 
 
@@ -484,7 +456,7 @@ line-height: 150px;
     margin: 20px auto;
     padding: 20px 20px;
     font-family: "Spectral", serif;
-
+    
 }
 
 .hotelcontacto h2{
@@ -495,11 +467,52 @@ line-height: 150px;
     font-size: 17px;
 }
 
-.datos small{
+#especificaciones{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    padding-left: 10px;
+    
+}
+
+
+#fecha{
+    margin: 10px;
+}
+.negocio{
+      padding: 20px;
+      display: inline-block;
+      text-align: left;
+      width: 100%;
+     }
+
+.negocio-texto{
+    justify-content: left;
+}
+
+.radio-option{
+    display: flex;
+}
+
+#si, #no{
+    margin-right: 5px;
+}
+
+
+
+.error {
     color: rgba(248, 2, 2, 0.877);
     display: none;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+.btn-final{
+    display: block;
+    text-align: center;
+    padding: 50px;
+    color: grey;
 }
 
 
@@ -586,6 +599,8 @@ footer h3{
         align-items: center;
            }
 
+    
+
     .booking-nav{
         margin: 0 auto;
         align-items: center;
@@ -595,29 +610,9 @@ footer h3{
     .booking-nav li{
         padding: 0px;
         margin: 10px;
+   
     }
 
-    .main-nav {
-        font-size: 12px;
-        margin: 10px;
-        background-color: #f2f2f2 ;
-        color: #fff;
-        border-radius: 5px;
-    }
-    
-    .main-nav ul{
-        list-style-type: none;
-        margin: 0px;
-        padding: 5px;
-        display: flex;
-        justify-content: space-around;
-        text-align: center;
-    }
-    
-    .main-nav li{
-        margin: 15px 0px
-    }
-    
     .contacto {
         display: flex;
         flex-direction: column;
@@ -643,8 +638,29 @@ footer h3{
     }
     .newsletter{
         flex-basis: calc(100.33% - 20px);
-       }        
+    }        
+
+      .habitacion1{
+        display: block;
+    }
+   
+    #especificaciones{
+        display: block;
+   
+    }
+
+    /*SPA CELULAR*/
+    section div .card {
+        display: block;
+        flex-wrap: wrap; 
+        width: 100%;
     
+    }
+    .card{
+    margin-bottom: 15px;
+    }
+
+   
 }
 
 @media (max-width: 576px) { 
@@ -676,23 +692,23 @@ footer h3{
     font-size: 12px;
    }
 
-/*index media.queries*/
-header h1{
+    /*index media.queries*/
+    header h1{
     font-size: 20px;
-}
-.img-frente{
-width: 100%;
-}    
-.caja-foto{
+    }
+    .img-frente{
+    width: 30%;
+    }    
+    .caja-foto{
     display: grid;
     grid-template-columns: 50% 50%;
-}
-.footer-content{
+    }
+    .footer-content{
     margin: 20px;
     justify-content: space-around;
     
-}
-.newsletter{
+    }
+    .newsletter{
     flex-basis: calc(100.33% - 20px);
    }        
    /*--------actividades-------*/
@@ -701,10 +717,10 @@ width: 100%;
     grid-template-columns: 50% 50%;
     justify-content: space-around;
     margin-top: 30px;
-}
-.h3-spa{
+    }
+    .h3-spa{
     font-size: 19px;
-}
+    }
     }
     
 /*---restaurante---*/
@@ -718,6 +734,8 @@ width: 100%;
     background-color: #007bff ;
     color: #fff;
     cursor: pointer;
+    margin-bottom: 15px ;
+
 }
 .btn-nav:hover{
     background-color: #0056b3;
@@ -813,4 +831,7 @@ width: 100%;
 }
 
 
+
+
+  
         

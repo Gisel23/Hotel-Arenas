@@ -627,7 +627,7 @@ footer h3{
 
     .booking-nav li{
         padding: 0px;
-        margin: 10px;
+        margin: 10px auto;
          
     }
 
@@ -704,17 +704,23 @@ footer h3{
     
    .booking-nav{
     font-size: 12px;
+    
    }
+
+   .booking-nav ul {
+    padding: 0px;
+ }
 
     /*index media.queries*/
     header h1{
     font-size: 20px;
     }
-    .img-frente{
-    width: 30%;
-    justify-content: center;
-    margin-left: 6px;
-    }    
+
+    .img-frente {
+        width: 100%; 
+        overflow: hidden; 
+        text-align: center;
+    }
 
     .caja-foto{
     display: grid;

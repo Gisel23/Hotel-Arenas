@@ -596,6 +596,13 @@ footer h3{
 @media (min-width: 769px) and (max-width: 961px) {
     #especificaciones {
         display: block;
+        
+    }
+
+    .booking-nav li{
+        padding: 0px auto;
+        margin: 7px;
+         
     }
 }
 

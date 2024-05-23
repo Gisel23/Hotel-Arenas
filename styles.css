@@ -613,12 +613,18 @@ footer h3{
         margin: 0 auto;
         align-items: center;
         text-align: center;
+        justify-content: center;
     }
 
     .booking-nav li{
         padding: 0px;
         margin: 10px;
-   
+         
+    }
+
+    .btn-nav{
+      padding: 7px;
+        
     }
 
     .contacto {
@@ -675,8 +681,6 @@ footer h3{
 }
 
 
-
-
 @media (max-width: 576px) { 
    
     .habitacion1{
@@ -694,7 +698,10 @@ footer h3{
     }
     .img-frente{
     width: 30%;
+    justify-content: center;
+    margin-left: 5px;
     }    
+
     .caja-foto{
     display: grid;
     grid-template-columns: 50% 50%;

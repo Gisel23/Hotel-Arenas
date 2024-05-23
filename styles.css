@@ -67,9 +67,7 @@ header h1{
     justify-content: center;
     align-items: center;
 }
-.main-nav li{
-    margin: 15px 0px
-}
+
 .booking-nav li{
     padding: 5px;
     margin: 10px
@@ -601,8 +599,12 @@ footer h3{
 
     .booking-nav li{
         padding: 0px auto;
-        margin: 7px;
+        margin: 3px;
          
+    }
+
+    .booking-nav ul {
+        width: 95%;
     }
 }
 

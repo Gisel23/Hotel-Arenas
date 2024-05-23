@@ -627,6 +627,11 @@ footer h3{
         
     }
 
+    .main-p{
+        margin: 20px 45px;
+        text-align: center;
+    }
+
     .contacto {
         display: flex;
         flex-direction: column;
@@ -699,7 +704,7 @@ footer h3{
     .img-frente{
     width: 30%;
     justify-content: center;
-    margin-left: 5px;
+    margin-left: 6px;
     }    
 
     .caja-foto{

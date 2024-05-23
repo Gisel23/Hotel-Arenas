@@ -71,7 +71,7 @@ header h1{
     margin: 15px 0px
 }
 .booking-nav li{
-    padding: 25px;
+    padding: 5px;
     margin: 10px
 }
 .main-nav a,
@@ -254,7 +254,9 @@ line-height: 150px;
     height: 175px;
 }
 
-
+.card{
+    margin-bottom: 15px;
+}
 
 /*-------------------ACTIVIDADES------------*/
 .fa-bell{
@@ -591,6 +593,12 @@ footer h3{
     margin-top: 15px;
 }
 /*-----------------------MEDIA QUERIES----------------*/
+@media (min-width: 769px) and (max-width: 961px) {
+    #especificaciones {
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
     .booking-nav ul {
         list-style: none;
@@ -646,10 +654,13 @@ footer h3{
    
     #especificaciones{
         display: block;
+        justify-content: center;
+        padding-left: 0px;
+
    
     }
 
-    /*SPA CELULAR*/
+    /*SPA */
     section div .card {
         display: block;
         flex-wrap: wrap; 
@@ -663,39 +674,16 @@ footer h3{
    
 }
 
-@media (max-width: 576px) and (orientation:landscape){
-    #especificaciones{
-        display: block;
-   
-    }
-}
+
 
 
 @media (max-width: 576px) { 
-    .main-nav {
-        font-size: 12px;
-        margin: 10px;
-        background-color: #f2f2f2 ;
-        color: #fff;
-        border-radius: 5px;
-        justify-items: center;
    
-
-    }
     .habitacion1{
         display: block;
 
     }
     
-    .main-nav ul{
-        list-style-type: none;
-        margin: 0px auto;
-        padding: 5px;
-        display: block;
-        justify-content: space-around;
-        justify-items: center;
-       
-    }
    .booking-nav{
     font-size: 12px;
    }

@@ -597,7 +597,7 @@ footer h3{
         display: block;
         justify-content: center;
         align-items: center;
-           }
+     }
 
     
 
@@ -662,6 +662,14 @@ footer h3{
 
    
 }
+
+@media (max-width: 576px) and (orientation:landscape){
+    #especificaciones{
+        display: block;
+   
+    }
+}
+
 
 @media (max-width: 576px) { 
     .main-nav {

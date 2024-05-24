@@ -520,7 +520,7 @@ line-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 10x;
 }
 
 
@@ -752,6 +752,13 @@ footer h3{
     .h3-spa{
     font-size: 19px;
     }
+
+    /*---contacto---*/
+    .imagen-contacto{
+        display: none;
+    }
+        
+
     }
     
 /*---restaurante---*/

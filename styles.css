@@ -515,6 +515,14 @@ line-height: 150px;
     color: grey;
 }
 
+.imagen-contacto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
 
 /*-------------------FOOTER----------------*/
 footer {

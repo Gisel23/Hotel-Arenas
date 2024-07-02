@@ -2,13 +2,14 @@ import express from 'express';
 import pool from './config/db.js';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-// middlewares
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(express.static("Public"));
 
-app.get('/Cliente', async (req, res) => {
+app.get('/cliente', async (req, res) => {
   
   try {
     let query = req.query
@@ -35,7 +36,7 @@ app.get('/Cliente', async (req, res) => {
   }
 });
 
-app.get('/Cliente/:id', async (req, res) => {
+app.get('/cliente/:id', async (req, res) => {
   try {
     const id = req.params.id
 
@@ -65,27 +66,24 @@ app.get('/Cliente/:id', async (req, res) => {
 });
 
 
-  app.post('/Cliente', async (req, res) => {
+  app.post('/cliente', async (req, res) => {
     try {
       console.log('REQ.BODY -->', req.body)
-      // Obtiene los valores del formulario
       const { nombre, direccion, documento, email, fk_nacionalidad, fk_habitacion } = req.body
       const connection = await pool.getConnection()
-      // const [result] = await connection.query('INSERT INTO usuarios (nombre, email, password, rol) VALUES (?, ?, ?, ?)', [nombre, email, password, rol]);
       const [result] = await connection.query('INSERT INTO Cliente SET ?', [
         req.body
       ])
       connection.release()
       res.json({ id: result.insertId, nombre, direccion, documento, email, fk_nacionalidad, fk_habitacion })
-      // res.redirect('/' + "?mensaje=Usuario creado correctamente")
     } catch (err) {
       console.error('Error de conexion a la base de datos', err)
       res.status(500).send('Internal server error')
     }
   })
 
-// Actualizar un usuario
-app.put('/Cliente/:id', async (req, res) => {
+
+app.put('/cliente/:id', async (req, res) => {
   const id = req.params.id;
   const cliente = req.body;
 
@@ -105,7 +103,7 @@ app.put('/Cliente/:id', async (req, res) => {
 
 });
   
-app.delete('/Cliente/:id', async (req, res) => {
+app.delete('/cliente/:id', async (req, res) => {
   const id = req.params.id;
   const sql = 'DELETE FROM Cliente WHERE id_cliente = ?';
 

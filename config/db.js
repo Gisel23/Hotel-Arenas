@@ -1,5 +1,7 @@
 import {createPool} from 'mysql2/promise';
+import dotenv from 'dotenv';
 
+dotenv.config();
 // Crear un pool de conexiones
 const pool = createPool({
   host: process.env.MYSQL_ADDON_HOST,

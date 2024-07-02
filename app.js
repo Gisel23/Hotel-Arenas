@@ -1,5 +1,6 @@
 import express from 'express';
 import pool from './config/db.js';
+import 'dotenv/config';
 
 const app = express();
 const port = 3000;
@@ -7,8 +8,9 @@ const port = 3000;
 // middlewares
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(express.static("Public"));
 
-app.get('/Cliente', async (req, res) => {
+app.get('/cliente', async (req, res) => {
     try {
       let query = req.query
       const connection = await pool.getConnection()
@@ -27,7 +29,7 @@ app.get('/Cliente', async (req, res) => {
     }
   });
 
-  app.get('/Cliente/:id', async (req, res) => {
+  app.get('/cliente/:id', async (req, res) => {
     try {
       const id = req.params.id
   
@@ -50,7 +52,7 @@ app.get('/Cliente', async (req, res) => {
   });
 
 
-  app.post('/Cliente', async (req, res) => {
+  app.post('/cliente', async (req, res) => {
     try {
       console.log('REQ.BODY -->', req.body)
       // Obtiene los valores del formulario
@@ -70,7 +72,7 @@ app.get('/Cliente', async (req, res) => {
   })
 
 // Actualizar un usuario
-app.put('/Cliente/:id', async (req, res) => {
+app.put('/cliente/:id', async (req, res) => {
   const id = req.params.id;
   const cliente = req.body;
 
@@ -90,7 +92,7 @@ app.put('/Cliente/:id', async (req, res) => {
 
 });
   
-app.delete('/Cliente/:id', async (req, res) => {
+app.delete('/cliente/:id', async (req, res) => {
   const id = req.params.id;
   const sql = 'DELETE FROM Cliente WHERE id_cliente = ?';
 

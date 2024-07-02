@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Registro</title>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="/submit_form" method="post" id="form">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+        
+        <label for="documento">Documento:</label><br>
+        <input type="text" id="documento" name="documento" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="nacionalidad">Nacionalidad:</label><br>
+        <input type="text" id="nacionalidad" name="nacionalidad" required><br><br>
+        
+        <label for="tipo_habitacion">Tipo de Habitación:</label><br>
+        <select id="tipo_habitacion" name="tipo_habitacion" required>
+            <option value="1">Standart</option>
+            <option value="2">Deluxe</option>
+            <option value="3">Suite</option>
+        </select><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        fetch('/cliente')
+        .then (response => response.json())
+        .then (data =>{
+            const cliente = data;
+            const clienteContainer = document.querySelector('#form');
+            cliente.forEach(cliente =>{
+                const clienteElement = document.createElement ('div');
+                clienteElement.innerHTML = `
+                <h2>El nuevo cliente es: ${cliente.nombre}</h2>
+                <h3>Domicilio: ${cliente.domicilio}</h3>
+                <h3>Nacionalidad: ${cliente.nacionalidad}</h3> 
+                <strong>${cliente.nombre} - eligio - ${cliente.tipoHabitacion}
+                `;
+                clienteContainer.appendChild(clienteElement);
+            });
+        });
+    </script>
+</body>
+</html>

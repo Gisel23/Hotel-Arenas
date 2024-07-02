@@ -2,10 +2,10 @@ import {createPool} from 'mysql2/promise';
 
 // Crear un pool de conexiones
 const pool = createPool({
-  host: 'bd6ciq2mbrmfn7krmuvs-mysql.services.clever-cloud.com',
-  user: 'uvflk2zxvd3lknwn',
-  password: '8p3QH6f33h275HLuRsHx',
-  database: 'bd6ciq2mbrmfn7krmuvs',
+  host: process.env.MYSQL_ADDON_HOST,
+  user: process.env.MYSQL_ADDON_USER,
+  password: process.env.MYSQL_ADDON_PASSWORD,
+  database: process.env.MYSQL_ADDON_DB,
   waitForConnections: true,
   connectionLimit: 5,
   queueLimit: 0

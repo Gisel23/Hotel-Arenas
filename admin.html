@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clientes</h1>
+    <table id="clientes">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Id</th>
+                <th>Dirección</th>
+                <th>Email</th>
+                <th>Documento</th>
+                <th>Habitación</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+
+    <script>
+        
+        fetch('/cliente')
+            .then(response => response.json()) 
+            .then(data => {
+                const clientes = data; 
+                console.log(clientes); 
+                const clienteContainer = document.querySelector('#clientes tbody');
+
+                        clientes.forEach(cliente => {
+                    const clienteRow = document.createElement('tr');
+                    clienteRow.innerHTML = `
+                        <td>${cliente.nombre}</td>
+                        <td>${cliente.id_cliente}</td>
+                        <td>${cliente.direccion}</td>
+                        <td>${cliente.email}</td>
+                        <td>${cliente.documento}</td>
+                        <td>${cliente.numero_habitacion}</td>
+                    `;
+                    clienteContainer.appendChild(clienteRow);
+                });
+            });
+    </script>
+</body>
+</html>

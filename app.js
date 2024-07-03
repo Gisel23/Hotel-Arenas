@@ -1,14 +1,75 @@
-import express from 'express';
+import express, { json } from 'express';
 import pool from './config/db.js';
+import jwt from 'jsonwebtoken';
+import cookieParser from 'cookie-parser';
 import 'dotenv/config';
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url); 
+const __dirname = dirname(__filename);
+
 const app = express();
+const SECRET_KEY = process.env.SECRET_KEY;
 const port = process.env.PORT || 3000;
 
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 app.use(express.static("Public"));
+app.use(express.static("img"));
+
+
+function verifyToken(req, res, next) {
+  const token = req.cookies.token;
+  console.log("req.cookies", req.cookies); 
+  if (!token) {
+    return res.status(403).send('Token requerido');
+  }
+  try {
+    const decoded = jwt.verify(token, SECRET_KEY);
+    console.log("decoded", decoded); 
+    req.user = decoded;
+    next();
+  } catch (error) {
+    console.error('Error verificando el token:', error); 
+    res.status(401).send('Token no válido');
+  }
+}
+
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  if (username === 'admin' && password === 'password') {
+    const token = jwt.sign({ username, role: 'admin' }, SECRET_KEY, { expiresIn: '10m' });
+    console.log("Token: ", token); 
+    res.cookie('token', token, {
+      httpOnly: true,
+      secure: false,
+      expires: new Date(Date.now() + 3600000)
+    });
+    res.redirect('/admin'); 
+  } else {
+    res.status(401).send('Credenciales no válidas');
+  }
+});
+
+app.get('/admin', verifyToken, (req, res) => {
+  console.log("req.user", req.user); 
+  if (req.user.role === 'admin') {
+    res.sendFile(__dirname + '/admin.html'); 
+  } else {
+    res.status(403).send('No tienes permisos para acceder a esta ruta');
+  }
+});
+
+app.get('/logout', (req, res) => {
+  res.clearCookie('token').send('Hasta Luego');
+});
+
+
 
 app.get('/cliente', async (req, res) => {
 
@@ -16,7 +77,7 @@ app.get('/cliente', async (req, res) => {
   try {
     let query = req.query
     const connection = await pool.getConnection()
-    const [rows] = await connection.query(`SELECT Cliente.nombre, Cliente.direccion, Cliente.documento, Cliente.email,
+    const [rows] = await connection.query(`SELECT Cliente.id_cliente, Cliente.nombre, Cliente.direccion, Cliente.documento, Cliente.email,
       Nacionalidad.nacionalidad,  Habitacion.fecha_inicio_reserva, Habitacion.fecha_fin_reserva, Habitacion.numero_habitacion,
       TipoHabitacion.nombre AS Tipo_habitacion,
       Habitacion.costo AS CostoHabitacion
@@ -83,16 +144,12 @@ app.get('/cliente/:id', async (req, res) => {
       connection.release()
 
       res.json({ id: result.insertId, nombre, direccion, documento, email, fk_nacionalidad, fk_habitacion })
-      // res.redirect('/' + "?mensaje=Usuario creado correctamente")
-
     } catch (err) {
       console.error('Error de conexion a la base de datos', err)
       res.status(500).send('Internal server error')
     }
   })
 
-
-// Actualizar un usuario
 
 app.put('/cliente/:id', async (req, res) => {
   const id = req.params.id;

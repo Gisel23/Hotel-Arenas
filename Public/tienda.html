@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Hotel & Spa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #e3a2a2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service,
+        .spa-activity {
+            margin-bottom: 20px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .item span {
+            font-weight: bold;
+        }
+
+        .cart {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            text-align: center;
+            padding: 5px;
+            color: grey;
+        }
+        .btn-final{
+            display: block;
+            text-align: center;
+            padding-top: 5px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Servicios del Hotel & Actividades de Spa</h1>
+
+        <div class="service">
+            <h2>Servicios del Hotel</h2>
+            <div class="item">
+                <span>Habitación Deluxe - $200</span>
+                <button onclick="addToCart('Habitación Deluxe', 200)">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span>Servicio de Comida - $50</span>
+                <button onclick="addToCart('Servicio de Comida', 50)">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="spa-activity">
+            <h2>Actividades de Spa</h2>
+            <div class="item">
+                <span>Masaje Relajante - $100</span>
+                <button onclick="addToCart('Masaje Relajante', 100)">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span>Tratamiento Facial - $80</span>
+                <button onclick="addToCart('Tratamiento Facial', 80)">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-amount">0</span></p>
+            <button onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </div>
+    <div class="btn-final">
+        <a href="../index.html"><i class="fa-solid fa-house"></i>Volver al Inicio</a>
+    </div>
+
+    <script>
+        let cart = [];
+        let totalAmount = 0;
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            totalAmount += price;
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach((cartItem, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${cartItem.item} - $${cartItem.price}`;
+                cartItems.appendChild(li);
+            });
+            document.getElementById('total-amount').textContent = totalAmount;
+        }
+
+        function checkout() {
+            alert('Compra finalizada! Total: $' + totalAmount);
+            cart = [];
+            totalAmount = 0;
+            renderCart();
+        }
+    </script>
+</body>
+
+</html>

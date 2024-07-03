@@ -1,5 +1,6 @@
 import express from 'express';
 import pool from './config/db.js';
+import 'dotenv/config';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,6 +11,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static("Public"));
 
 app.get('/cliente', async (req, res) => {
+
   
   try {
     let query = req.query
@@ -29,12 +31,15 @@ app.get('/cliente', async (req, res) => {
         res.json(filtrados) 
     } else {
         res.json(rows[0])
+
     }
   } catch (err) {
     console.error('Error de conexion a la base de datos', err)
     res.status(500).send('Internal server error')
   }
 });
+
+
 
 app.get('/cliente/:id', async (req, res) => {
   try {
@@ -58,6 +63,7 @@ app.get('/cliente/:id', async (req, res) => {
     } else {
         
        res.json(rows[0])
+
     }
   } catch (err) {
     console.error('Error de conexion a la base de datos', err)
@@ -75,13 +81,18 @@ app.get('/cliente/:id', async (req, res) => {
         req.body
       ])
       connection.release()
+
       res.json({ id: result.insertId, nombre, direccion, documento, email, fk_nacionalidad, fk_habitacion })
+      // res.redirect('/' + "?mensaje=Usuario creado correctamente")
+
     } catch (err) {
       console.error('Error de conexion a la base de datos', err)
       res.status(500).send('Internal server error')
     }
   })
 
+
+// Actualizar un usuario
 
 app.put('/cliente/:id', async (req, res) => {
   const id = req.params.id;

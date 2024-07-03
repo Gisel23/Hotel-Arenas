@@ -1,7 +1,11 @@
 import {createPool} from 'mysql2/promise';
 import dotenv from 'dotenv';
 
+// Crear un pool de conexiones
+
+
 dotenv.config();
+
 
 const pool = createPool({
   host: process.env.MYSQL_ADDON_HOST,
@@ -21,8 +25,8 @@ pool.getConnection()
     })
     .catch(err=> console.error('Error connecting to database', err));
 
-console.log(pool.getConnection())
+//console.log(pool.getConnection())
 
-console.log(pool)
+//console.log(pool)
 
 export default pool;

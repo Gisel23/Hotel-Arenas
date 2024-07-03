@@ -63,7 +63,8 @@ app.get('/cliente', async (req, res) => {
         req.body
       ])
       connection.release()
-      res.json({ id: result.insertId, nombre, direccion, documento, email, fk_nacionalidad, fk_habitacion })
+      res.send("cliente.html")
+      //json({ id: result.insertId, nombre, direccion, documento, email, fk_nacionalidad, fk_habitacion })
       // res.redirect('/' + "?mensaje=Usuario creado correctamente")
     } catch (err) {
       console.error('Error de conexion a la base de datos', err)

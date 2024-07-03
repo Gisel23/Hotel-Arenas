@@ -21,8 +21,8 @@ pool.getConnection()
     })
     .catch(err=> console.error('Error connecting to database', err));
 
-console.log(pool.getConnection())
+//console.log(pool.getConnection())
 
-console.log(pool)
+//console.log(pool)
 
 export default pool;

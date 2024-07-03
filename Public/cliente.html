@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Formulario de Registro</h1>
-    <form action="/submit_form" method="post" id="form">
+    <form action="/cliente" method="post" id="form">
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" required><br><br>
         
@@ -30,22 +30,27 @@
         
         <input type="submit" value="Enviar">
     </form>
+
+    <div id="cliente-container"></div>
+
     <script>
         fetch('/cliente')
-        .then (response => response.json())
-        .then (data =>{
-            const cliente = data;
-            const clienteContainer = document.querySelector('#form');
-            cliente.forEach(cliente =>{
-                const clienteElement = document.createElement ('div');
+        .then(response => response.json())
+        .then(data => {
+            const clienteContainer = document.getElementById('cliente-container');
+            data.forEach(cliente => {
+                const clienteElement = document.createElement('div');
                 clienteElement.innerHTML = `
-                <h2>El nuevo cliente es: ${cliente.nombre}</h2>
-                <h3>Domicilio: ${cliente.domicilio}</h3>
-                <h3>Nacionalidad: ${cliente.nacionalidad}</h3> 
-                <strong>${cliente.nombre} - eligio - ${cliente.tipoHabitacion}
+                    <h2>El nuevo cliente es: ${cliente.nombre}</h2>
+                    <h3>Domicilio: ${cliente.direccion}</h3>
+                    <h3>Nacionalidad: ${cliente.nacionalidad}</h3> 
+                    <strong>${cliente.nombre} - eligió - ${cliente.tipo_habitacion}</strong>
                 `;
                 clienteContainer.appendChild(clienteElement);
             });
+        })
+        .catch(error => {
+            console.error('Error fetching client data:', error);
         });
     </script>
 </body>
